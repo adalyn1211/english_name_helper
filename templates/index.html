@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#4A90E2">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>英文起名助手</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>英文起名助手</h1>
+            <p class="subtitle">为您推荐最适合的英文名字</p>
+        </header>
+
+        <main>
+            <div class="card">
+                <form id="name-form">
+                    <div class="input-section">
+                        <div class="input-field">
+                            <input 
+                                type="text" 
+                                id="chinese-name" 
+                                placeholder="输入中文名字" 
+                                maxlength="4"
+                                autocomplete="off"
+                                spellcheck="false"
+                                aria-label="中文名字输入框">
+                        </div>
+                        
+                        <div class="gender-selector">
+                            <span class="gender-label">性别：</span>
+                            <div class="gender-options">
+                                <label class="gender-option">
+                                    <input type="radio" name="gender" value="male" checked>
+                                    <span class="radio-custom"></span>
+                                    <span class="gender-text">男</span>
+                                </label>
+                                <label class="gender-option">
+                                    <input type="radio" name="gender" value="female">
+                                    <span class="radio-custom"></span>
+                                    <span class="gender-text">女</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button 
+                        type="submit"
+                        class="generate-btn"
+                        aria-label="生成英文名按钮">
+                        生成英文名
+                    </button>
+                </form>
+            </div>
+
+            <div id="loading" class="loading" style="display: none;" aria-live="polite">
+                <div class="spinner" role="progressbar"></div>
+                <p>正在生成英文名字...</p>
+            </div>
+
+            <div id="result-container" style="display: none;">
+                <div class="results-header">
+                    <h2>为您推荐的英文名字</h2>
+                </div>
+                <div id="suggestions" class="suggestions"></div>
+            </div>
+            
+            <!-- 名字卡片模板 -->
+            <template id="name-card-template">
+                <div class="name-card">
+                    <div class="name-header">
+                        <h3 class="name-title"></h3>
+                        <button class="pronounce-btn" onclick="togglePronunciation(this)">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                    </div>
+                    <div class="pronunciation-guide hidden">
+                        <div class="phonetic-container">
+                            <div class="phonetic"></div>
+                            <div class="guide-steps"></div>
+                        </div>
+                    </div>
+                    <div class="name-meaning">
+                        <p></p>
+                    </div>
+                </div>
+            </template>
+        </main>
+
+        <footer>
+            <p>智能英文起名助手 &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

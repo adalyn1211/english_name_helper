@@ -1,0 +1,1147 @@
+/* 名字含义样式 */
+.name-meaning {
+    margin-top: 20px;
+    color: #2c3e50;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 0 5px;
+}
+
+.name-meaning p {
+    margin: 0;
+    text-indent: 2em;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* 段落间距 */
+.name-meaning p:not(:last-child) {
+    margin-bottom: 1.5em;
+}
+
+/* 段落样式 */
+.name-meaning p {
+    position: relative;
+    padding-left: 1em;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* 第一段（历史背景）样式 */
+.name-meaning p:first-child {
+    border-left-color: #4a90e2;
+    background: linear-gradient(to right, rgba(74, 144, 226, 0.05), transparent);
+}
+
+/* 第二段（名字呼应）样式 */
+.name-meaning p:last-child {
+    border-left-color: #34c759;
+    background: linear-gradient(to right, rgba(52, 199, 89, 0.05), transparent);
+}
+
+/* 名字卡片样式 */
+.name-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.name-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 名字标题和发音按钮 */
+.name-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.name-header h3 {
+    margin: 0;
+    font-size: 32px;
+    color: #333;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+}
+
+.pronounce-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a90e2;
+}
+
+.pronounce-btn:hover {
+    background: #f0f8ff;
+    transform: scale(1.1);
+}
+
+/* 发音指导样式 */
+.pronunciation-guide {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    max-height: 500px;
+    border-left: 4px solid #4a90e2;
+}
+
+.pronunciation-guide.hidden {
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+.phonetic {
+    font-family: 'Arial', sans-serif;
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e1e8ed;
+    font-weight: 500;
+}
+
+.guide-steps {
+    color: #34495e;
+    font-size: 16px;
+    line-height: 1.8;
+    padding-left: 10px;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+/* 名字含义样式 */
+.name-meaning {
+    margin-top: 20px;
+    color: #2c3e50;
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: justify;
+    padding: 0 5px;
+}
+
+.name-meaning p {
+    margin: 0;
+    text-indent: 2em;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .name-card {
+        padding: 20px;
+        margin: 15px;
+    }
+    
+    .name-header h3 {
+        font-size: 28px;
+    }
+    
+    .pronunciation-guide {
+        padding: 15px 20px;
+    }
+    
+    .phonetic {
+        font-size: 18px;
+    }
+    
+    .guide-steps, .name-meaning {
+        font-size: 15px;
+    }
+}
+
+/* 名字卡片样式 */
+.name-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.name-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* 名字标题和发音按钮 */
+.name-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.name-header h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1d1d1f;
+    flex-grow: 1;
+}
+
+.pronounce-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 8px;
+    margin-left: 12px;
+    color: #0066cc;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pronounce-btn:hover {
+    background: #f5f5f7;
+    transform: scale(1.1);
+}
+
+.pronounce-btn:before {
+    content: '🔊';
+}
+
+/* 发音指导 */
+.pronunciation-guide {
+    background: #f5f5f7;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+    max-height: 200px;
+    opacity: 1;
+}
+
+.pronunciation-guide.hidden {
+    max-height: 0;
+    opacity: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.phonetic {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 8px 0;
+}
+
+.guide-steps {
+    font-size: 15px;
+    color: #1d1d1f;
+    margin: 0;
+    line-height: 1.4;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif;
+}
+
+/* 名字含义 */
+.name-meaning {
+    color: #1d1d1f;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.name-meaning p {
+    margin: 0;
+    padding: 0;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif;
+    letter-spacing: 0.5px;
+    border-left: none;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .name-card {
+        padding: 20px;
+    }
+    
+    .name-header h3 {
+        font-size: 24px;
+    }
+    
+    .pronounce-btn {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .pronunciation-guide {
+        padding: 12px;
+    }
+    
+    .phonetic {
+        font-size: 14px;
+    }
+    
+    .guide-steps {
+        font-size: 14px;
+    }
+    
+    .name-meaning {
+        font-size: 15px;
+    }
+}
+
+/* 加载动画 */
+#loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #0066cc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 错误提示 */
+.error {
+    color: #ff3b30;
+    background: #ffebeb;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 20px 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* 全局样式 */
+:root {
+    --primary-color: #06c;
+    --secondary-color: #f5f5f7;
+    --text-color: #1d1d1f;
+    --error-color: #ff3b30;
+    --success-color: #34C759;
+    --border-radius: 16px;
+    --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    --background-color: #f5f5f7;
+    --card-background: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* 头部样式 */
+header {
+    text-align: center;
+    margin-bottom: 32px;
+    padding: 24px 0;
+    background: transparent;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    color: #666666;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* 主要内容区域 */
+main {
+    margin: 0 auto;
+    max-width: 680px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.card {
+    background: var(--card-background);
+    padding: 32px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* 输入区域 */
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.input-field {
+    width: 100%;
+}
+
+.gender-selector {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.gender-label {
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.gender-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.radio-custom {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    position: relative;
+    margin-right: 8px;
+    transition: all 0.2s ease;
+}
+
+.gender-option input[type="radio"]:checked + .radio-custom {
+    border-color: var(--primary-color);
+    background-color: #fff;
+}
+
+.gender-option input[type="radio"]:checked + .radio-custom:after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.gender-text {
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+@media (min-width: 768px) {
+    .input-section {
+        flex-direction: row;
+        align-items: center;
+        gap: 24px;
+    }
+    
+    .input-field {
+        flex: 1;
+    }
+    
+    .gender-selector {
+        min-width: 200px;
+    }
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 17px;
+    border: 1px solid #E0E0E0;
+    border-radius: var(--border-radius);
+    transition: all 0.2s ease;
+    background-color: white;
+    color: var(--text-color);
+    -webkit-appearance: none;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+.generate-btn {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 16px 32px;
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(74, 144, 226, 0.25);
+}
+
+.generate-btn:hover {
+    background-color: #357abd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.35);
+}
+
+.generate-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(74, 144, 226, 0.25);
+}
+
+@media (max-width: 768px) {
+    .generate-btn {
+        width: calc(100% - 40px);
+        margin: 20px auto;
+        padding: 14px 28px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .generate-btn {
+        width: calc(100% - 30px);
+        margin: 15px auto;
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+
+/* 加载动画 */
+.loading {
+    text-align: center;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.loading p {
+    color: #666;
+    font-size: 16px;
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    border: 3px solid rgba(0, 0, 0, 0.04);
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 结果区域 */
+.results {
+    margin-top: 30px;
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.results-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #EFEFEF;
+}
+
+.results h2 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.name-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.name-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.name-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.name-type {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    background: #f5f5f7;
+    margin-bottom: 16px;
+}
+
+.name-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.name-header h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1d1d1f;
+    flex-grow: 1;
+}
+
+.pronounce-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 8px;
+    margin-left: 12px;
+    color: #0066cc;
+    transition: all 0.2s ease;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pronounce-btn:hover {
+    background: #f5f5f7;
+    transform: scale(1.1);
+}
+
+.pronounce-btn:before {
+    content: '🔊';
+}
+
+.pronunciation-guide {
+    background: #f5f5f7;
+    border-radius: 12px;
+    padding: 10px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.pronunciation-guide.hidden {
+    display: none;
+}
+
+.phonetic {
+    color: #666;
+    font-size: 16px;
+    margin: 0;
+}
+
+.guide-steps {
+    color: #2c3e50;
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+.name-meaning {
+    color: #1d1d1f;
+    line-height: 1.6;
+    font-size: 16px;
+    margin-top: 16px;
+    padding: 16px;
+    background: #f0f7ff;
+    border-radius: 8px;
+    border: 1px solid rgba(45, 127, 249, 0.1);
+}
+
+.name-meaning p {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.5px;
+    border: none;
+    background: none;
+}
+
+.name-meaning p:first-child,
+.name-meaning p:last-child {
+    border: none;
+    background: none;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .name-card {
+        padding: 20px;
+    }
+    
+    .name-header h3 {
+        font-size: 24px;
+    }
+    
+    .pronounce-btn {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+    }
+    
+    .pronunciation-guide {
+        padding: 12px;
+    }
+    
+    .phonetic {
+        font-size: 14px;
+    }
+    
+    .guide-steps {
+        font-size: 14px;
+    }
+    
+    .name-meaning {
+        font-size: 15px;
+    }
+}
+
+/* 加载动画 */
+#loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #0066cc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 错误提示 */
+.error {
+    color: #ff3b30;
+    background: #ffebeb;
+    padding: 16px;
+    border-radius: 12px;
+    margin: 20px 0;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 24px;
+    color: #666666;
+    font-size: 14px;
+    margin-top: 40px;
+    border-top: 1px solid #EFEFEF;
+    background-color: #FAFAFA;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .input-section {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .name-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 无障碍支持 */
+@media (prefers-reduced-motion: reduce) {
+    .spinner {
+        animation: none;
+    }
+    
+    .name-card {
+        transition: none;
+    }
+    
+    .error {
+        animation: none;
+    }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primary-color: #5a9cf0;
+        --secondary-color: #2c3e50;
+        --text-color: #ecf0f1;
+        --error-color: #e74c3c;
+        --success-color: #2ecc71;
+    }
+
+    body {
+        background-color: #1a1a1a;
+    }
+
+    header, main {
+        background: #2d2d2d;
+    }
+
+    input[type="text"] {
+        background: #333;
+        border-color: #444;
+        color: white;
+    }
+
+    .name-card {
+        background: #333;
+    }
+
+    .error {
+        background-color: rgba(231, 76, 60, 0.2);
+    }
+}
+
+/* 音标样式 */
+.phonetic-guide {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    white-space: nowrap; /* 确保内容在一行显示 */
+    overflow: hidden; /* 防止内容溢出 */
+    text-overflow: ellipsis; /* 如果内容太长，显示省略号 */
+}
+
+/* 发音指导区域 */
+.pronunciation-guide {
+    background: #f8f9fa;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.pronunciation-guide.hidden {
+    display: none;
+}
+
+/* 音标和发音指导容器 */
+.phonetic-container {
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    border: none;
+    background: none;
+}
+
+/* 音标显示 */
+.phonetic {
+    color: #666;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    white-space: nowrap;
+    margin-right: 4px;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+    background: none !important;
+    padding: 0;
+    line-height: inherit;
+}
+
+/* 发音步骤说明 */
+.guide-steps {
+    color: #2c3e50;
+    font-size: 16px;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    text-decoration: none !important;
+    background: none !important;
+    padding: 0;
+    line-height: inherit;
+}
+
+/* 朗读按钮 */
+.pronounce-btn {
+    background: none;
+    border: none;
+    color: #2d7ff9;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pronounce-btn:hover {
+    color: #1a70f7;
+}
+
+/* 名字标题区域 */
+.name-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* 主体容器 */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* 输入区域 */
+.input-section {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* 输入框样式 */
+.name-input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    font-size: 17px;
+    transition: all 0.2s ease;
+    margin-bottom: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: #1d1d1f;
+    background: #ffffff;
+}
+
+.name-input:focus {
+    border-color: #2d7ff9;
+    box-shadow: 0 0 0 4px rgba(45, 127, 249, 0.1);
+    outline: none;
+}
+
+/* 性别选择区域 */
+.gender-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.gender-label {
+    font-size: 17px;
+    color: #1d1d1f;
+    margin-right: 16px;
+    font-weight: 400;
+}
+
+/* 生成按钮 */
+.generate-btn {
+    background: #2d7ff9;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.generate-btn:hover {
+    background: #1a70f7;
+}
+
+.generate-btn:active {
+    background: #0056d6;
+}
+
+/* 名字卡片 */
+.name-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 名字标题 */
+.name-title {
+    font-size: 34px;
+    color: #1d1d1f;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+/* 发音指导区域 */
+.pronunciation-guide {
+    background: #fbfbfd;
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+/* 名字含义区域 */
+.name-meaning {
+    color: #1d1d1f;
+    line-height: 1.6;
+    font-size: 17px;
+    margin-top: 16px;
+    padding: 16px;
+    background: #f0f7ff;
+    border-radius: 8px;
+    border: 1px solid rgba(45, 127, 249, 0.1);
+}
+
+.name-meaning p {
+    margin: 0;
+    padding: 0;
+    font-family: "PingFang SC", "Microsoft YaHei", "微软雅黑", sans-serif;
+    letter-spacing: 0.5px;
+    border-left: none;
+}
+
+/* 整体背景 */
+body {
+    background: #f5f5f7;
+    min-height: 100vh;
+    padding: 20px 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    color: #1d1d1f;
+}
