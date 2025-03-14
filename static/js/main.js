@@ -221,72 +221,60 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const chineseName = document.getElementById('chinese-name').value.trim();
+    async function generateNames() {
+        const chineseName = document.getElementById('chineseName').value;
         const gender = document.querySelector('input[name="gender"]:checked').value;
         
         if (!chineseName) {
             alert('请输入中文名字');
             return;
         }
-        
-        // 显示加载指示器
-        loadingIndicator.style.display = 'block';
-        resultContainer.style.display = 'none';
-        
-        console.log("=== 开始生成名字 ===");
-        console.log("用户输入的名字:", chineseName);
-        console.log("用户选择的性别:", gender);
-        
-        // 发送请求到后端
-        fetch('/api/suggest_names', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                chinese_name: chineseName,
-                gender: gender
-            })
-        })
-        .then(response => {
-            console.log("=== 收到后端响应 ===");
-            console.log("响应状态码:", response.status);
-            return response.json();
-        })
-        .then(data => {
-            console.log("=== 解析后的响应数据 ===");
-            console.log(data);
+
+        // 显示加载动画
+        document.getElementById('loading').classList.remove('hidden');
+        document.getElementById('results').innerHTML = '';
+
+        try {
+            const response = await fetch('/.netlify/functions/api', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    chinese_name: chineseName,
+                    gender: gender
+                })
+            });
+
+            const data = await response.json();
             
-            // 隐藏加载指示器
-            loadingIndicator.style.display = 'none';
-            resultContainer.style.display = 'block';
-            
-            if (data.error) {
-                const errorP = document.createElement('p');
-                errorP.className = 'error';
-                errorP.textContent = `错误: ${data.error}`;
-                suggestionsContainer.innerHTML = '';
-                suggestionsContainer.appendChild(errorP);
-                return;
+            // 处理返回的数据
+            let resultsHtml = '';
+            if (data.names && data.names.length > 0) {
+                data.names.forEach(nameInfo => {
+                    resultsHtml += `
+                        <div class="name-card">
+                            <h2 class="english-name">${nameInfo.name}</h2>
+                            <p class="name-explanation">${nameInfo.explanation}</p>
+                        </div>
+                    `;
+                });
+            } else {
+                resultsHtml = '<p class="error">抱歉，生成名字时出现错误，请稍后再试。</p>';
             }
-            
-            // 处理并显示内容
-            const content = processContent(data.suggestions).join('\n');
-            displaySuggestions(suggestionsContainer, content);
-            console.log("=== 显示结果 ===");
-        })
-        .catch(error => {
-            console.error('错误:', error);
-            loadingIndicator.style.display = 'none';
-            resultContainer.style.display = 'block';
-            const errorP = document.createElement('p');
-            errorP.className = 'error';
-            errorP.textContent = `发生错误: ${error.message}`;
-            suggestionsContainer.innerHTML = '';
-            suggestionsContainer.appendChild(errorP);
-        });
+
+            document.getElementById('results').innerHTML = resultsHtml;
+        } catch (error) {
+            console.error('Error:', error);
+            document.getElementById('results').innerHTML = '<p class="error">抱歉，服务暂时不可用，请稍后再试。</p>';
+        } finally {
+            // 隐藏加载动画
+            document.getElementById('loading').classList.add('hidden');
+        }
+    }
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        generateNames();
     });
 });
